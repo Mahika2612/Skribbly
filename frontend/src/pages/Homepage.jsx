@@ -14,19 +14,21 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("useEffect is running");
     const fetchNotes = async () => {
+ fetch('https://jsonplaceholder.typicode.com/todos/1').then(response => console.log('Dummy fetch successful', response)).catch(error => console.error('Dummy fetch failed', error));
+ console.log(api);
       try {
+        console.log("fetchNotes is running");
+ console.log("Attempting to fetch notes...");
         const res = await api.get("/notes");
         setNotes(res.data);
         setIsRateLimited(false);
       } catch (error) {
-        if (error.response?.status === 429) {
-          setIsRateLimited(true);
-        } else {
-          toast.error("Failed to load notes");
-        }
+ console.error("Error fetching notes:", error);
       } finally {
         setLoading(false);
+        console.log("fetchNotes finished");
       }
     };
 
