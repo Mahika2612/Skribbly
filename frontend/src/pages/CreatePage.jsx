@@ -52,11 +52,11 @@ const CreatePage = () => {
           </Link>
 
           <div className="card bg-yellow-100 shadow-xl relative">
-            {/* Cat image in top right */}
+            {/* Cat image in top right, responsive */}
             <img
               src={catImg}
               alt="Sleeping Cat"
-              className="absolute top-4 right-4 w-24 h-24 object-contain opacity-90 pointer-events-none"
+              className="absolute top-4 right-4 w-20 h-20 sm:w-24 sm:h-24 object-contain opacity-90 pointer-events-none"
             />
 
             <div className="card-body">

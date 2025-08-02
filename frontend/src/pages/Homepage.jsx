@@ -58,7 +58,11 @@ const HomePage = () => {
             ))}
           </div>
         )}
-      </div>
+            </div>
+
+      <footer className="w-full text-center py-6 text-sm text-gray-600 z-10 relative">
+        © {new Date().getFullYear()} Skribbly by Mahika Das. All rights reserved.
+      </footer>
 
       {/* Animation styles */}
       <style>{`
@@ -82,6 +86,7 @@ const HomePage = () => {
         }
       `}</style>
     </div>
+
   );
 };
 

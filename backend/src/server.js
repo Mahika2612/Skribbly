@@ -27,20 +27,20 @@ app.use("/api/notes", notesRoutes);
 // --- Start Server Function ---
 const startServer = async () => {
   try {
-    // 1. Log the URI to ensure it's loaded (check this in your Render logs)
+
     console.log('Attempting to connect with MONGO_URI:', process.env.MONGO_URI ? 'Loaded' : 'NOT FOUND');
     
-    // 2. Await the DB connection
+
     await connectDB();
     console.log('MongoDB connected successfully.');
     
-    // 3. Start listening for requests only after the DB is connected
+
     app.listen(PORT, () => {
       console.log('Server is running on port', PORT);
     });
     
   } catch (error) {
-    // 4. If anything above fails, this will catch it
+
     console.error('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
     console.error('!!! FAILED TO START SERVER !!!');
     console.error('Error:', error.message);
