@@ -23,7 +23,7 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use("/api/notes",notesRoutes);
+app.use("/",notesRoutes);
 
 connectDB().then(() => {
     app.listen(PORT, () => {

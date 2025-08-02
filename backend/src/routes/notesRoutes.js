@@ -2,14 +2,14 @@ import express from 'express';
 import { getNotes, updateNote,getNotesById, createNote, deleteNote } from '../controllers/notesController.js';
 const router=express.Router();
 
-router.get('/api/notes', getNotes);
+router.get('/', getNotes);
 
-router.get('/api/notes/:id', getNotesById);
+router.get('/:id', getNotesById);
 
-router.post('/api/notes',createNote);
+router.post('/',createNote);
 
-router.put('/api/notes/:id', updateNote);
+router.put('/:id', updateNote);
 
-router.delete('/api/notes/:id', deleteNote);
+router.delete('/:id', deleteNote);
 
 export default router;
