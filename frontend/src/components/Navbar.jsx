@@ -1,6 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleNewNote = () => {
+    navigate("/create");
+  };
+
   return (
     <div className="navbar bg-base-100 shadow-md px-6 py-4 animate-fade-in-down">
       <div className="flex-1">
@@ -9,12 +16,15 @@ const Navbar = () => {
         </a>
       </div>
       <div className="flex-none">
-        <button className="btn btn-warning btn-sm rounded-full shadow hover:scale-105 transition-transform duration-200">
+        <button
+          onClick={handleNewNote}
+          className="btn btn-warning btn-sm rounded-full shadow hover:scale-105 transition-transform duration-200"
+        >
           New Note
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import api from "../lib/axios";
 import toast from "react-hot-toast";
 import { ArrowLeftIcon, LoaderIcon, Trash2Icon } from "lucide-react";
+import React from "react";
+
 
 const NoteDetailPage = () => {
   const [note, setNote] = useState(null);

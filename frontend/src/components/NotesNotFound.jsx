@@ -2,7 +2,6 @@ import React from "react";
 import { NotebookIcon } from "lucide-react";
 import { Link } from "react-router";
 import nonotecat from "../assets/nonotecat.png";
-import React from "react";
 
 const NotesNotFound = () => {
   return (
