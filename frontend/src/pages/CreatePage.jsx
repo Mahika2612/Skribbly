@@ -4,6 +4,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router";
 import api from "../lib/axios";
+import React from "react";
 
 const CreatePage = () => {
   const [title, setTitle] = useState("");
