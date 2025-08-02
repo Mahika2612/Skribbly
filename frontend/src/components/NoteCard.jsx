@@ -3,7 +3,8 @@ import { Link } from "react-router";
 import { formatDate } from "../lib/utils";
 import api from "../lib/axios";
 import toast from "react-hot-toast";
-import noteCat from "../assets/notecat.png"; // 🐱 Import your cat image
+import noteCat from "../assets/notecat.png"; // 
+import React from "react";
 
 const NoteCard = ({ note, setNotes }) => {
   const handleDelete = async (e, id) => {
