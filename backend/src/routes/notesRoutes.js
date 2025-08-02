@@ -4,7 +4,7 @@ const router=express.Router();
 
 router.get('/', getNotes);
 
-router.get('/', getNotesById);
+router.get('/:id', getNotesById);
 
 router.post('/',createNote);
 
