@@ -18,7 +18,7 @@ app.use(express.json());// Middleware to parse JSON bodies
 // app.use(rateLimiter); 
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'], // allow frontend & Postman
+  origin: ['http://localhost:5173', 'http://localhost:3000','https://skribbly-olive.vercel.app'], // allow frontend & Postman
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
